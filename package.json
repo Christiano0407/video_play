@@ -1,0 +1,22 @@
+{
+  "name": "video_play",
+  "version": "1.0.0",
+  "description": "Create project with Vanilla Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christiano0407/video_play.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "\"Chris Velazquez <placebo0704@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Christiano0407/video_play/issues"
+  },
+  "homepage": "https://github.com/Christiano0407/video_play#readme"
+}
