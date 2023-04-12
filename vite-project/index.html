@@ -89,7 +89,43 @@
             Millions of movies, TV shows and people to discover. Explore now.
           </p>
         </div>
-        <div class="layout__video--play"></div>
+        <div class="layout__video--play">
+          <div class="player">
+            <video
+              src="#"
+              type="video/mp4"
+              class="player__video viewer"
+              id="idPlayer"
+            ></video>
+
+            <div class="player__controls">
+              <div class="progress">
+                <div class="progress__filled"></div>
+              </div>
+              <button class="player__button toggle" title="">►</button>
+              <input
+                type="range"
+                name="volume"
+                class="player__slider"
+                min="0"
+                max="1"
+                step="0.5"
+                value="1"
+              />
+              <input
+                type="range"
+                name="playBackRate"
+                class="player__slider"
+                min="0.5"
+                max="2"
+                step="0.1"
+                value="1"
+              />
+              <button data-skip="-10" class="player__button">« 10s</button>
+              <button data-skip="25" class="player__button">« 25s</button>
+            </div>
+          </div>
+        </div>
         <div class="layout__video--slider"></div>
       </section>
     </main>
