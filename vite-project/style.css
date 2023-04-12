@@ -207,3 +207,13 @@ h1 {
 .layout__icon--listPlus a {
   font-size: 2rem;
 }
+
+/* === Layout Video ==== */
+.layout__video {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 0.5rem;
+}
