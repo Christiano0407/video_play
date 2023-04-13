@@ -367,3 +367,26 @@ input[type='range']::-moz-range-thumb {
   background: #ffc600;
   cursor: pointer;
 }
+/* === Slider Player === */
+.layout__video--slider {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  outline: 2px solid red;
+}
+.layout__video--slider .slider__title {
+  width: 100%;
+  margin: 1rem auto;
+}
+.slider__cards {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-rows: 1rem;
+  gap: 1rem;
+}
