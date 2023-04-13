@@ -388,5 +388,32 @@ input[type='range']::-moz-range-thumb {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-template-rows: 1rem;
-  gap: 1rem;
+  gap: 2rem;
+}
+.card__video {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* .card__video--image figure {
+  width: 20rem;
+  height: 15rem;
+} */
+.card__video--image figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+}
+
+.figure-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.figure-icon .figure-icon_img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
