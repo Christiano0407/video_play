@@ -7,11 +7,11 @@ const filledProgress = document.querySelector(`.progress__Filled`);
 const range = document.querySelectorAll(`.player__slider`);
 const toggle = document.querySelector(`.toggle`);
 const skip = document.querySelectorAll(`[data-skip]`);
+/* let factor = range.attr(`max`);
+let isPlaying = false; */
 
 //** ============================ === Functions && Methods === ================================== */
 function playerOn() {
-  console.log('video');
-
   const playVideo = video.paused ? `play` : `pause`;
   video[playVideo]();
 }
@@ -23,6 +23,22 @@ function controlPlay() {
 
 function skipData() {
   console.log(this.value);
+  video.currentTime += parseFloat(this.dataset.skip);
+}
+
+function activeRange() {
+  video[this.name] = this.value;
+  //console.log(this.name);
+  /*  this.value((video.currentTime / video.duration) * factor);
+  if (isPlaying) requestAnimationFrame(activeRange); */
+}
+// => flexbasis;
+function progressPlay(e) {
+  console.log(this.value);
+}
+
+function progressFilledOn() {
+  //const time = (video.currentTime / video.duration) * 100;
 }
 
 //** ============================ === Events === ================================== */
@@ -30,3 +46,7 @@ player.addEventListener(`click`, playerOn);
 video.addEventListener(`play`, controlPlay);
 video.addEventListener(`pause`, controlPlay);
 skip.forEach((data) => data.addEventListener(`click`, skipData));
+range.forEach((value) => value.addEventListener(`change`, activeRange));
+range.forEach((value) => value.addEventListener(`mousemove`, activeRange));
+progress.addEventListener(`click`, activeRange);
+filledProgress.addEventListener(`click`, progressFilledOn);
