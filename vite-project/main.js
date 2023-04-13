@@ -3,7 +3,7 @@ const player = document.querySelector(`.player`);
 const video = player.querySelector(`.viewer`);
 const controls = document.querySelector(`.player__controls`);
 const progress = document.querySelector(`.progress`);
-const filledProgress = document.querySelector(`.progress__Filled`);
+const filledProgress = document.querySelector(`.progress__filled`);
 const range = document.querySelectorAll(`.player__slider`);
 const toggle = document.querySelector(`.toggle`);
 const skip = document.querySelectorAll(`[data-skip]`);
@@ -32,21 +32,27 @@ function activeRange() {
   /*  this.value((video.currentTime / video.duration) * factor);
   if (isPlaying) requestAnimationFrame(activeRange); */
 }
-// => flexbasis;
-function progressPlay(e) {
-  console.log(this.value);
+
+function handleProgress() {
+  const percent = (video.currentTime / video.duration) * 100;
+  filledProgress.style.flexBasis = `${percent}%`;
 }
 
-function progressFilledOn() {
-  //const time = (video.currentTime / video.duration) * 100;
+function playProgress(e) {
+  const lengthX = (e.offsetX / progress.offsetWidth) * video.duration;
+  video.currentTime = lengthX;
 }
 
 //** ============================ === Events === ================================== */
+let mouseDown = false;
 player.addEventListener(`click`, playerOn);
 video.addEventListener(`play`, controlPlay);
 video.addEventListener(`pause`, controlPlay);
+video.addEventListener(`timeupdate`, handleProgress);
 skip.forEach((data) => data.addEventListener(`click`, skipData));
 range.forEach((value) => value.addEventListener(`change`, activeRange));
 range.forEach((value) => value.addEventListener(`mousemove`, activeRange));
-progress.addEventListener(`click`, activeRange);
-filledProgress.addEventListener(`click`, progressFilledOn);
+progress.addEventListener('click', playProgress);
+//progress.addEventListener(`mousemove`, (e) => mouseDown && playProgress(e));
+progress.addEventListener(`mousedown`, () => (mouseDown = true));
+progress.addEventListener(`mouseup`, () => (mouseDown = true));
