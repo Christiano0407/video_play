@@ -1,0 +1,30 @@
+/*=============== Mobile ===================================*/
+@media (max-width: 360px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 640px) {
+}
+/*=============== Mobile & Tablet ===================================*/
+@media (min-width: 641px) and (max-width: 768px) {
+}
+/*=============== Tablet  ===================================*/
+@media screen and (min-width: 768px) {
+}
+
+/*=============== Screen Laptop ===================================*/
+@media screen and (min-width: 1024px) {
+}
+/*=============== #Option Screen  ===================================*/
+@media only screen and (min-width: 1280px) {
+}
+
+/*=============== Laptop Large Screen  ===================================*/
+@media only screen and (min-width: 1440px) {
+}
+
+/*=============== Laptop Xtra Large =================================*/
+@media only screen and (min-width: 1920px) {
+}
