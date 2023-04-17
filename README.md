@@ -9,8 +9,9 @@ Create project with Vanilla Javascript.
  [Dribble](https://dribbble.com/shots/19867825-Video-Streaming-Platform)
 
 ## Vite
- >
+
  > Tool Frontend - development environment
+
  [viteJs](https://vitejs.dev/)
 
 > npm create
@@ -44,8 +45,40 @@ npm run dev
 
 ```
 
-## Project Finished
+## Design Style
+
+> Palette Colors
+
+[coolors](https://coolors.co/)
+
+```
+ --white: #fff;
+ --black: #000;
+ --primary-color: #0d0d0f;
+ --primary-color-plus: #1c1d1f;
+ --secondary-color: #f20e89;
+ --three-color: #e473ff;
+```
+
+## Fonts
 >
+> Google Fonts
+
+[google_fonts](https://fonts.google.com/)
+
+```
+
+  --font: 'Poppins', sans-serif;
+```
+
+## CDN
+>
+> Content Delivery Network
+
+[CDNJs](https://cdnjs.com/)
+
+## Project Finished
+
 > Project Finished
 
 ![](./vite-project/src/img/img_screen/videoPlay.png)
